@@ -62,8 +62,12 @@ $ vue -V                           // @vue/cli 4.4.4
 $ mkdir ~/<好きな名前のディレクトリ>
 $ cd ~/<↑で作ったディレクトリパス>
 $ vue create <好きな名前>
-$ npm run serve
 
+// 3000番ポートを恒久的に許可
+$ sudo firewall-cmd --add-port=8080/tcp --zone=public --permanent
+$ sudo firewall-cmd --reload
+
+$ npm run serve
 // ブラウザで http://localhost:8080 でVue.jsのロゴが表示されたらOK
 
 // VSCode をインストール
@@ -74,6 +78,7 @@ https://www.blog.uta8a.net/posts/2019-12-20-vscode-remote-ssh-dev/
 
 // git
 https://qiita.com/mochimochi-inu/items/914debabca56acc20a6d
+$ sudo yum -y install wget
 $ git init
 $ git add .
 $ git commit -m "First"
