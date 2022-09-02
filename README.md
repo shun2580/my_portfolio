@@ -78,8 +78,21 @@ https://www.blog.uta8a.net/posts/2019-12-20-vscode-remote-ssh-dev/
 
 // git
 https://qiita.com/mochimochi-inu/items/914debabca56acc20a6d
-$ sudo yum -y install wget
+https://style.potepan.com/articles/34189.html
 $ git init
 $ git add .
 $ git commit -m "First"
-$ git remote add origin *****
+$ git remote add origin *******
+$ git push -u origin main(or master)
+
+// github.io
+// プロジェクト直下にvue.config.jsファイルを作成し、以下記載
+module.exports = {
+  outputDir: 'docs',
+  publicPath: './'
+}
+
+$ npm run build
+
+// pages設定
+https://qiita.com/sindicum/items/f867db9de54630464fea
