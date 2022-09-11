@@ -1,38 +1,47 @@
 <template>
-  <header>
-    <v-app-bar
-      app
-      dark
-    >
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-      <v-toolbar-title>MyPortfolioSite</v-toolbar-title>
-      <v-tabs>
-        <v-tab
-          v-for="(menuItem, index) in menuItems"
-          :key="index"
+  <v-app-bar
+    color="blue"
+    dense
+  >
+    <v-toolbar-title>
+      <router-link to='/' class="link">
+      My Portfolio
+      </router-link>
+    </v-toolbar-title>
+
+    <v-spacer></v-spacer>
+
+    <v-toolbar-items>
+      <v-tabs fixed-tabs>
+        <router-link
+          class="link"
+          v-for="item in items"
+          :key="item.to"
+          :to="item.to"
         >
-          {{ menuItem.name }}
-        </v-tab>
+          <v-tab>{{ item.to }}</v-tab>
+        </router-link>
       </v-tabs>
-    </v-app-bar>
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-    >
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group>
-          <v-list-item
-            v-for="(menuItem, index) in menuItems"
-            :key="index"
-          >
-            <v-list-item-title>{{ menuItem.name }}</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-  </header>
+    </v-toolbar-items>
+  </v-app-bar>
 </template>
+
+<script>
+export default {
+  name: 'AppHeader',
+  data: () => ({
+      items: [
+        {to:'Profile'},
+        {to:'Skills'},
+        {to:'Works'},
+        {to:'Contact'},
+      ]
+    })
+}
+</script>
+
+<style>
+.link {
+  text-decoration: none;
+}
+</style>
