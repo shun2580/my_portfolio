@@ -7,30 +7,28 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    component: Home,
-    meta: { requiresAuth: true },
-    children: [
-      {
-        path: "/profile",
-        name: "Profile",
-        component: () => import(/* webpackChunkName: "profile" */ '../views/Profile.vue'),
-      },
-      {
-        path: "/works",
-        name: "Works",
-        component: () => import(/* webpackChunkName: "works" */ '../views/Works.vue'),
-      },
-      {
-        path: "/skills",
-        name: "Skills",
-        component: () => import(/* webpackChunkName: "skills" */ '../views/Skills.vue'),
-      },
-      {
-        path: "/contact",
-        name: "Contact",
-        component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue'),
-      },
-    ]
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    component: () => import(/* webpackChunkName: "profile" */ '../views/Profile.vue'),
+  },
+  {
+    path: "/works",
+    name: "Works",
+    component: () => import(/* webpackChunkName: "works" */ '../views/Works.vue'),
+  },
+  {
+    path: "/skills",
+    name: "Skills",
+    component: () => import(/* webpackChunkName: "skills" */ '../views/Skills.vue'),
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue'),
   },
 ]
 
