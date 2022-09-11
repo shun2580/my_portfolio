@@ -1,47 +1,46 @@
 <template>
   <v-app-bar
-    color="blue"
+    fixed
+    elevate-on-scroll
     dense
+    app
+    dark
   >
-    <v-toolbar-title>
-      <router-link to='/' class="link">
-      My Portfolio
-      </router-link>
-    </v-toolbar-title>
-
-    <v-spacer></v-spacer>
-
-    <v-toolbar-items>
-      <v-tabs fixed-tabs>
-        <router-link
-          class="link"
-          v-for="item in items"
-          :key="item.to"
-          :to="item.to"
+    <v-container class="d-flex align-center">
+      <v-toolbar-title
+        class="mr-auto text-h4"
+        style="cursor:pointer"
+        @click="$router.push('/')"
+      >
+        Shun's Portfolio
+      </v-toolbar-title>
+      <div class="d-none d-md-inline-block">
+        <v-btn
+          v-for="item in menu"
+          :key="item.label"
+          :to="item.path"
+          text
+          x-large
         >
-          <v-tab>{{ item.to }}</v-tab>
-        </router-link>
-      </v-tabs>
-    </v-toolbar-items>
+          {{ item.label }}
+        </v-btn>
+      </div>
+    </v-container>
   </v-app-bar>
 </template>
 
 <script>
 export default {
-  name: 'AppHeader',
-  data: () => ({
-      items: [
-        {to:'Profile'},
-        {to:'Skills'},
-        {to:'Works'},
-        {to:'Contact'},
+  data () {
+    return {
+      drawer: false,
+      menu: [
+        { label: 'Profile', path: "/profile" },
+        { label: 'Skills', path: '/skills' },
+        { label: 'Works', path: '/works' },
+        { label: 'Contact', path: '/contact' },
       ]
-    })
+    }
+  }
 }
 </script>
-
-<style>
-.link {
-  text-decoration: none;
-}
-</style>
