@@ -6,7 +6,7 @@
     <!--ページ-->
     <v-main>
       <router-view/>
-      <snowf
+      <!--<snowf
         :amount="50"
         :size="10"
         :speed="1.5"
@@ -17,7 +17,7 @@
         :zIndex="null"
         :resize="true"
         color="#dcdcdc"
-      />
+      />-->
     </v-main>
 
     <!--フッター-->
@@ -28,18 +28,17 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
-import Snowf from 'vue-snowf';
+//import Snowf from 'vue-snowf';
 
 export default {
   name: 'App',
   components: {
     AppHeader,
     AppFooter,
-    Snowf,
+    //Snowf,
   },
 
   data: () => ({
-    //
   }),
 };
 </script>

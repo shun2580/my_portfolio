@@ -1,29 +1,52 @@
 <template>
-  <section class="skills">
-    <v-container fluid fill-height class="skills__content">
-      <v-row>
-        <v-col class="skills__content-text">
-          <p>作成中。。。</p>
-        </v-col>
-      </v-row>
+  <div id="skill">
+    <div class="py-12"></div>
+    <v-container>
+      <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">SKILLS</h2>
+      <v-responsive
+        class="mx-auto mb-12"
+        width="56"
+      >
+        <v-divider class="mb-1"></v-divider>
+        <v-divider></v-divider>
+      </v-responsive>
+          <wordcloud
+            :data="defaultWords"
+            name-key="name"
+            value-key="value"
+            :color="Accent"
+            :show-tooltip="false"
+          />
     </v-container>
-  </section>
+  </div>
 </template>
+<script>
 
 
 
-<style  lang="scss" scoped>
-.skills__content {
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 50vh;
+    import wordcloud from 'vue-wordcloud'
 
-  &-text {
-    color: black;
-    text-align: center;
-    font-size: 100px;
-    font-weight: bold;
+    export default {
+        components: {
+            wordcloud
+        },
+
+       data () {
+    return {
+      defaultWords: [
+      { name: 'Vue.js', value: 15 },
+      { name: 'Javascript', value: 14 },
+      { name: 'HTML', value: 15 },
+      { name: 'css', value: 15 },
+      { name: 'GitHub', value: 12 },
+      { name: 'AWS', value:12 },
+      { name: 'ZABBIX', value: 10 },
+      { name: 'Slack', value: 12 },
+      { name: 'VSCode', value: 13 },
+      { name: 'Linux', value: 12 },
+      { name: 'PHP', value: 12 },
+      ]
+    }
   }
 }
-</style>
+</script>

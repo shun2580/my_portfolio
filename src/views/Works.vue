@@ -3,7 +3,7 @@
   <div class="py-12"></div>
 
     <v-container>
-      <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">works</h2>
+      <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">WORKS</h2>
 
       <v-responsive
         class="mx-auto mb-12"
@@ -50,7 +50,7 @@
         items: [
           { id: 1,
             desc: 'vue.jsとvuetifyで作ったこのポートフォリオサイトです。とりあえずの完成を目標にしたので、細かいデザインやアニメーションが設定できていないこと、レスポンシブデザインの追加が課題です。',
-            lang: 'HTML, CSS(Sass),Javascript, Vue.js, Vuetify',
+            lang: 'HTML, CSS(Sass), Vue.js, Vuetify, github.io',
             img_src: require('../assets/img/portfolio.png'),
           },
           {
