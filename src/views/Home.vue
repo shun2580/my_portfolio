@@ -10,7 +10,7 @@
 
 <style  lang="scss" scoped>
   .home__content {
-    background-image: url("~@/assets/img/naturalroom.png");
+    background-image: url("~@/assets/img/home.png");
     background-size: cover;
     background-position: center center;
     width: 100%;
