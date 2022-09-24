@@ -5,7 +5,10 @@
 
     <!--ページ-->
     <v-main>
-      <router-view/>
+      <transition mode="out-in">
+        <router-view/>
+      </transition>
+      <!-- 以下アニメーションを追加すると画面がクリックできないためコメントアウト中 -->
       <!--<snowf
         :amount="50"
         :size="10"
@@ -42,3 +45,13 @@ export default {
   }),
 };
 </script>
+
+<style>
+.v-enter-active, .v-leave-active {
+  transition: opacity .5s;
+}
+
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
+</style>

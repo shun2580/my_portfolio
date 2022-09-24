@@ -18,27 +18,27 @@
 
 <style>
   #overlay{
-  z-index:1;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color:rgba(133, 117, 117, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    z-index:1;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(245, 239, 239, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-#content{
-  z-index:2;
-  width:50%;
-  padding-top: 5em;
-  padding-bottom: 5em;
-  text-align: center;
-}
+  #content{
+    z-index:2;
+    width:50%;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    text-align: center;
+  }
 
-#content > img {
-  width: 80%;
-}
+  #content > img {
+    width: 80%;
+  }
 </style>

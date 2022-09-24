@@ -1,40 +1,35 @@
 <template>
-<section id="works">
-  <div class="py-12"></div>
-
-    <v-container>
-      <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">WORKS</h2>
-
-      <v-responsive
-        class="mx-auto mb-12"
-        width="56"
-      >
-        <v-divider class="mb-1"></v-divider>
-        <v-divider></v-divider>
-      </v-responsive>
-
-      <v-row>
-        <v-col
-          v-for="item in items"
-          :key="item.id"
-          cols="4"
-        >
-          <div class="card">
-            <img
-              @click="openModal(item)"
-              :src="item.img_src"
-              alt="Card image"
-              max-width="25%"
-            >
-          </div>
-          <modal :val="postItem" v-show="showContent" @close="closeModal" />
-        </v-col>
-      </v-row>
-    </v-container>
-
+  <div class="works">
     <div class="py-12"></div>
-</section>
-
+      <v-container>
+        <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">WORKS</h2>
+        <v-responsive
+          class="mx-auto mb-12"
+          width="56"
+        >
+          <v-divider class="mb-1"></v-divider>
+          <v-divider></v-divider>
+        </v-responsive>
+        <v-row>
+          <v-col
+            v-for="item in items"
+            :key="item.id"
+            cols="4"
+          >
+            <div class="card">
+              <img
+                @click="openModal(item)"
+                :src="item.img_src"
+                alt="Card image"
+                max-width="25%"
+              >
+            </div>
+            <modal :val="postItem" v-show="showContent" @close="closeModal" />
+          </v-col>
+        </v-row>
+      </v-container>
+    <div class="py-12"></div>
+  </div>
 </template>
 
 <script>
@@ -55,13 +50,13 @@
           },
           {
             id: 2,
-            desc: 'coming_soon',
+            desc: '-',
             lang: '-',
             img_src: require('../assets/img/coming_soon.png'),
           },
           {
             id: 3,
-            desc: 'coming_soon',
+            desc: '-',
             lang: '-',
             img_src: require('../assets/img/coming_soon.png'),
           },
@@ -80,7 +75,15 @@
   }
 </script>
 <style>
-#item-list{
-  display:flex;
-}
+  .works {
+    background-image: url("~@/assets/img/work.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+
+  #item-list {
+    display:flex;
+  }
 </style>
