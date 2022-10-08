@@ -1,5 +1,5 @@
 # portfolio
-https://shun2580.github.io/portfolio
+https://shun2580.github.io/my_portfolio
 
 ---------- 環境構築　メモ --------------
 
