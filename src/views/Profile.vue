@@ -29,10 +29,10 @@
           max-width="720"
         >
           <div class="text">
-            西川 駿<br>
-            Shun Nishikawa<br>
+            <span class="name_1">西川 駿</span><br>
+            <span class="name_2">Shun Nishikawa</span><br>
             <br>
-            京都府出身の新米エンジニアです。25才でIT業界へ転職し、客先常駐でWEBシステムやスマホアプリの運用監視業務を行っています。その中でVue.jsを用いた小規模システムの開発に携わる機会があったことから開発業務に興味を持ち、JavaScriptの勉強を始めました。現在は言語の勉強をすすめるとともに、何かシステムやアプリを作成できないか模索中です。
+            <span class="about">京都府出身の新米エンジニアです。25才でIT業界へ転職し、客先常駐でWEBシステムやスマホアプリの運用監視業務を行っています。その中でVue.jsを用いた小規模システムの開発に携わる機会があったことから開発業務に興味を持ち、JavaScriptの勉強を始めました。現在は言語の勉強をすすめるとともに、何かシステムやアプリを作成できないか模索中です。</span>
           </div>
         </v-responsive>
 
@@ -81,7 +81,25 @@ export default {
   height: 100%;
 }
 
-.text {
-  color: white
+.name_1 {
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  text-shadow: 2px 2px 5px white;
 }
+
+.name_2 {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 2px 2px 5px white;
+}
+
+.about {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px white;
+}
+
 </style>

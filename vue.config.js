@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/portfolio',
+  publicPath: '/my_portfolio',
   outputDir: 'docs',
 
   transpileDependencies: [
