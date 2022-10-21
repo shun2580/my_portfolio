@@ -19,7 +19,6 @@
         class="mx-auto mb-8"
         width="56"
       >
-
         <v-divider class="mb-1"></v-divider>
           <v-divider></v-divider>
         </v-responsive>
@@ -35,26 +34,28 @@
             <span class="about">京都府出身の新米エンジニアです。25才でIT業界へ転職し、客先常駐でWEBシステムやスマホアプリの運用監視業務を行っています。その中でVue.jsを用いた小規模システムの開発に携わる機会があったことから開発業務に興味を持ち、JavaScriptの勉強を始めました。現在は言語の勉強をすすめるとともに、何かシステムやアプリを作成できないか模索中です。</span>
           </div>
         </v-responsive>
-
-        <v-avatar
-          class="elevation-12 mb-12"
-          size="128"
-        >
-          <v-img src="@/assets/img/profile.png"></v-img>
-        </v-avatar>
-
-        <div></div>
-        <div class="icon">
-          <v-btn
-            icon
-            href="https://github.com/shun2580"
+        <v-row justify="center">
+          <v-avatar
+            class="elevation-12 mb-12"
+            size="128"
           >
-            <v-icon
-              size="50"
-              color="black"
-            >mdi-github</v-icon>
-          </v-btn>
-        </div>
+            <v-img src="@/assets/img/profile.png"></v-img>
+          </v-avatar>
+          <div class="icon">
+            <v-btn
+              href="https://github.com/shun2580"
+              class="ma-11"
+              fab
+              dark
+              color="purple"
+            >
+              <v-icon dark x-large>
+                mdi-github
+              </v-icon>
+            </v-btn>
+
+          </div>
+        </v-row>
     </v-container>
   </div>
 </template>

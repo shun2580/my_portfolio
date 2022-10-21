@@ -15,15 +15,29 @@
             v-for="item in items"
             :key="item.id"
             cols="4"
+            class="d-flex child-flex"
           >
-            <div class="card">
-              <img
-                @click="openModal(item)"
-                :src="item.img_src"
-                alt="Card image"
-                max-width="25%"
-              >
-            </div>
+            <v-img
+              @click="openModal(item)"
+              :src="item.img_src"
+              alt="Card image"
+              aspect-ratio="1"
+              max-height="350"
+              max-width="500"
+            >
+              <template v-slot:placeholder>
+                <v-row
+                  class="fill-height ma-0"
+                  align="center"
+                  justify="center"
+                >
+                  <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                  ></v-progress-circular>
+                </v-row>
+              </template>
+            </v-img>
             <modal :val="postItem" v-show="showContent" @close="closeModal" />
           </v-col>
         </v-row>
